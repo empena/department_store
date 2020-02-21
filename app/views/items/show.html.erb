@@ -1,0 +1,9 @@
+<p>Department store > <%= @department.name %> > <%= @item.name %></p>
+<hr />
+<h1><%= @item.name %></h1>
+<p><%= @item.body %></p>
+<p><%= @item.price %></p>
+<hr />
+<p><%= link_to 'Edit Item', edit_department_item_path([@department, @item]) %></p>
+<p><%= link_to 'Delete Item', [@department, @item], method: :delete %></p>
+<p><%= link_to 'Back To Items', department_items_path(@department) %></p>

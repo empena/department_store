@@ -1,0 +1,10 @@
+<h1>Department Store</h1>
+<hr />
+<p><%= link_to "Add a new department", new_department_path %></p>
+<hr />
+<% @departments.each do |department| %>
+<h2><%= department.name %></h2>
+<p><%= link_to "View", department_path(department) %></p>
+<p><%= link_to "Edit", edit_department_path(department) %></p>
+<p><%= link_to "Delete", department, method: :delete %></p>
+<% end %>
